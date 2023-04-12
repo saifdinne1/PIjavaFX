@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="766.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.ReservationController">
+   <children>
+      <TableView fx:id="tablereservation" layoutX="-3.0" prefHeight="404.0" prefWidth="421.0">
+        <columns>
+          <TableColumn fx:id="idr" prefWidth="75.0" text="id" />
+          <TableColumn fx:id="servicer" prefWidth="75.0" text="service" />
+            <TableColumn fx:id="chambrer" prefWidth="75.0" text="chambre" />
+            <TableColumn fx:id="ddr" prefWidth="75.0" text="date debut" />
+            <TableColumn fx:id="ddf" prefWidth="75.0" text="date fin" />
+        </columns>
+      </TableView>
+      <Pane layoutX="419.0" prefHeight="404.0" prefWidth="348.0">
+         <children>
+            <TextField fx:id="textidr" layoutX="106.0" layoutY="71.0" prefHeight="25.0" prefWidth="159.0" promptText="id reservation" />
+            <TextField fx:id="txtservice" layoutX="111.0" layoutY="209.0" promptText="service" />
+            <TextField fx:id="txtchambre" layoutX="111.0" layoutY="247.0" promptText="chambre" />
+            <Button layoutX="163.0" layoutY="287.0" mnemonicParsing="false" onAction="#AddReservation" text="ajouter" />
+            <DatePicker fx:id="dddr" layoutX="102.0" layoutY="115.0" promptText="date debut " />
+            <DatePicker fx:id="dfr" layoutX="98.0" layoutY="167.0" promptText="date fin" />
+            <Button fx:id="UpdateReservation" layoutX="163.0" layoutY="329.0" mnemonicParsing="false" onAction="#UpdateReservation" text="update" />
+            <Button fx:id="addbilan11" layoutX="155.0" layoutY="365.0" mnemonicParsing="false" onAction="#DeleteReservation" text="supprimer" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

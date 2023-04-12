@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="730.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/19" fx:controller="view.ServiceController">
+   <children>
+      <TableView fx:id="tableservice" layoutX="-1.0" prefHeight="400.0" prefWidth="390.0">
+        <columns>
+          <TableColumn fx:id="ids" prefWidth="75.0" text="id" />
+          <TableColumn fx:id="noms" prefWidth="75.0" text="name" />
+            <TableColumn fx:id="types" prefWidth="75.0" text="type" />
+        </columns>
+      </TableView>
+      <Pane layoutX="389.0" prefHeight="400.0" prefWidth="341.0">
+         <children>
+            <TextField fx:id="Ids" layoutX="97.0" layoutY="67.0" />
+            <TextField fx:id="names" layoutX="97.0" layoutY="130.0" />
+            <TextField fx:id="typeser" layoutX="97.0" layoutY="200.0" />
+            <Button layoutX="145.0" layoutY="266.0" mnemonicParsing="false" onAction="#AddService" text="ajouter" />
+            <Button layoutX="134.0" layoutY="317.0" mnemonicParsing="false" onAction="#DeleteService" text="supprimer" />
+            <Button layoutX="142.0" layoutY="361.0" mnemonicParsing="false" onAction="#UpdateService" text="update" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
