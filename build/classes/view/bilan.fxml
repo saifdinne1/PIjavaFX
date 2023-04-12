@@ -12,7 +12,7 @@
    <children>
       <TableView fx:id="tablebilan" prefHeight="421.0" prefWidth="502.0">
         <columns>
-          <TableColumn fx:id="id" prefWidth="75.0" text="Id" />
+          <TableColumn fx:id="id" prefWidth="75.0" text="num bilan" />
           <TableColumn fx:id="datedebut" prefWidth="123.20001220703125" text="date debut" />
             <TableColumn fx:id="datefin" prefWidth="103.99998474121094" text="date fin" />
             <TableColumn fx:id="ch" prefWidth="81.5999755859375" text="charge" />
@@ -21,7 +21,7 @@
       </TableView>
       <Pane layoutX="511.0" layoutY="11.0" prefHeight="400.0" prefWidth="222.0">
          <children>
-            <TextField fx:id="Idb" layoutX="31.0" layoutY="45.0" prefHeight="25.0" prefWidth="159.0" promptText="id bilan" />
+            <TextField fx:id="Idb" layoutX="31.0" layoutY="45.0" prefHeight="25.0" prefWidth="159.0" promptText="num bilan" />
             <TextField fx:id="charge" layoutX="37.0" layoutY="187.0" promptText="charge" />
             <TextField fx:id="vid" layoutX="37.0" layoutY="231.0" promptText="vente" />
             <Button fx:id="addbilan" layoutX="85.0" layoutY="289.0" mnemonicParsing="false" onAction="#AddLivraison" text="ajouter" />

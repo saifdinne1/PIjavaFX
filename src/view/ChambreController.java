@@ -23,6 +23,8 @@ import model.chambre;
 import model.service;
 import service.chambreservice;
 import service.serviceservice;
+import static view.FactureController.isAlpha;
+import static view.FactureController.isNumeric;
 
 /**
  * FXML Controller class
@@ -89,7 +91,9 @@ public class ChambreController implements Initializable {
       @FXML 
     private void AddChambre(ActionEvent event) throws Exception { 
                 chambreservice  ls= new chambreservice();
-         
+           if (((isNumeric(servicech.getText()))&& (servicech.getText().length() != 0) ) && ((isNumeric(numch.getText()))&& (numch.getText().length() != 0) )
+               ) {
+      
             
      
         
@@ -116,7 +120,12 @@ public class ChambreController implements Initializable {
             System.out.println(ex.getMessage());
         }
     
-}
+} else{
+              Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Error");
+            alert.setContentText("Invalid champ!");
+            alert.show();
+        }}
     
     @FXML
  private void UpdateChambre(ActionEvent event){

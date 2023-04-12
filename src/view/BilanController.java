@@ -26,6 +26,8 @@ import model.bilan;
 import model.facture;
 import service.Bilanservice;
 import service.factureservice;
+import static view.FactureController.isAlpha;
+import static view.FactureController.isNumeric;
 
 /**
  * FXML Controller class
@@ -115,7 +117,8 @@ public class BilanController implements Initializable {
      
         
             bilan l =new bilan();
-
+if (((isNumeric(vid.getText()))&& (vid.getText().length() != 0) ) && ((isNumeric(charge.getText()))&& (charge.getText().length() != 0) )
+             ) {
          //int id=Integer.parseInt(id_livr.getText());
           Date datedebut=Date.valueOf(d1.getValue()); 
            Date datefin=Date.valueOf(d2.getValue()); 
@@ -145,6 +148,11 @@ public class BilanController implements Initializable {
         }
         catch (SQLException ex) {
             System.out.println(ex.getMessage());
+        }}else{
+              Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Error");
+            alert.setContentText("Invalid champ!");
+            alert.show();
         }
     
 }
